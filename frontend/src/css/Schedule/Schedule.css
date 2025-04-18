@@ -1,0 +1,21 @@
+.schedule-container {
+    min-height: calc(100vh - 70px);
+    background-color: #f5f7fa;
+    padding: 2rem 4rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    margin-top: 70px;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .schedule-container {
+        padding: 1.5rem 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .schedule-container {
+        padding: 1rem;
+    }
+}

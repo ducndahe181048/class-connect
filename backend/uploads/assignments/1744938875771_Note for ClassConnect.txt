@@ -1,0 +1,167 @@
+Note for ClassEdu:
+
+- mongodb+srv://anhduc:0344420156@cluster.ep6y0.mongodb.net/?retryWrites=true&w=majority
+
+- Student: Login -> Overview page (display nothing if have no class) -> Join class via code (5 characters)
+                 -> Overview page now will display class details (assignments,...) -> Profile page -> Logout
+
+- Teacher: Login -> Overview page (display nothing if have no class) -> Create class via code (5 characters)
+                 -> Overview page now will display class details (assignments,...) -> Profile page -> Logout
+
+- FEATURE NOT DONE/IN PROGRESS (2:35 CH 06/03/2025): Forgot password, schedules,....
+
+- ClassConnect: (Database)
+
++ User:
+{
+  "_id": ObjectId,
+  "fullname": "John Doe",
+  "username": "johndoe123",
+  "password": "hashed_password",
+  "role": "student" : "teacher",
+  "dob": "2005-06-15",
+  "city": "New York",
+  "school": "XYZ High School",
+  "classId": ["ABC12", "DEF34"]  // Reference to Class
+  "classroom": "12",
+}
+
++ Classes: 
+{
+  "_id": "ABC12",
+  "teacherId": ObjectId,
+  "numberOfStudents": 30,
+  "students": [ObjectId, ObjectId],
+  "lessons": [ObjectId, ObjectId],  // References to lessons collection
+  "assignments": [ObjectId, ObjectId],  // References to assignments collection
+  "documents": [ObjectId, ObjectId]  // References to documents collection
+}
+
++ Lessons:
+{
+  "_id": ObjectId,
+  "classId": "ABC12",
+  "title": "Math Lesson 1",
+  "content": "Introduction to Algebra",
+  "date": "2025-02-12"
+}
+
++ Assignments:
+{
+  "_id": ObjectId,
+  "classId": "ABC12",
+  "title": "Homework 1",
+  "description": "Solve algebra problems",
+  "dueDate": "2025-02-20",
+  "submissions": [
+    {
+      "studentId": ObjectId,
+      "fileUrl": "https://example.com/homework.pdf",
+      "submittedAt": "2025-02-15"
+    }
+  ]
+}
+
++ Documents:
+{
+  "_id": ObjectId,
+  "classId": "ABC12",
+  "title": "Class Rules",
+  "fileUrl": "https://example.com/rules.pdf",
+  "uploadedAt": "2025-02-10"
+}
+
+Template for reset password:
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đặt lại mật khẩu</title>
+  <style>
+    body {
+      font-family: "Arial", sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    .email-container {
+      width: 100%;
+      background-color: #f4f4f4;
+      padding: 20px;
+    }
+    .email-content {
+      background-color: #ffffff;
+      margin: 0 auto;
+      padding: 20px;
+      max-width: 600px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      color: #007bff;
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 16px;
+      color: #333;
+      margin: 10px 0;
+      text-align: center;
+    }
+    .highlight {
+      color: #007bff;
+      font-weight: bold;
+    }
+    .button-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .button {
+      display: inline-block;
+      background-color: #007bff;
+      color: #ffffff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 16px;
+    }
+    .button:hover {
+      background-color: blue;
+    }
+    .footer {
+      text-align: center;
+      color: #888;
+      font-size: 12px;
+      margin-top: 20px;
+    }
+    .footer a {
+      color: #007bff;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="email-container">
+    <div class="email-content">
+      <h1>Yêu cầu đặt lại mật khẩu</h1>
+      <p>Xin chào <span class="highlight" th:text="${customerName}">[Customer Name]</span>,</p>
+      <p>Chúng tôi đã nhận được yêu cầu đặt lại mật khẩu cho tài khoản của bạn.</p>
+      <p>Vui lòng nhấn vào nút bên dưới để thiết lập lại mật khẩu của bạn:</p>
+      
+      <div class="button-container">
+        <a th:href="@{'http://localhost:3000/reset?accountId=' + ${accountId}}" class="button">Đặt lại mật khẩu</a>
+      </div>
+
+      <p>Nếu bạn không yêu cầu hành động này, vui lòng bỏ qua email này.</p>
+
+      <div class="footer">
+        <p>Trân trọng,</p>
+        <p>Đội ngũ hỗ trợ ClassConnect</p>
+        <p><a href="http://localhost:3000">Trang chủ ClassConnect</a></p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

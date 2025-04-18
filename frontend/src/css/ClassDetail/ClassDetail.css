@@ -1,0 +1,43 @@
+.class-detail-container {
+    min-height: calc(100vh - 70px);
+    background-color: #f5f7fa;
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    margin-top: 70px;
+}
+
+.class-detail-info {
+    margin-bottom: 30px;
+}
+
+.class-detail-content {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    min-height: 300px;
+    overflow-x: auto;
+}
+
+@media (min-width: 768px) {
+    .class-detail-container {
+        padding: 2rem 3rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .class-detail-container {
+        padding: 2rem 4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .class-detail-container {
+        padding: 1rem;
+    }
+
+    .class-detail-content {
+        padding: 15px;
+    }
+}

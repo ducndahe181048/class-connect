@@ -1,0 +1,28 @@
+.files-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.file-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    background-color: #f3f4f6;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    gap: 10px;
+}
+
+.download-button {
+    background: none;
+    border: none;
+    color: #4f46e5;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.download-button:hover {
+    color: #4338ca;
+}

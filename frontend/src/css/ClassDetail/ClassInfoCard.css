@@ -1,0 +1,40 @@
+.class-detail-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.class-detail-card-header {
+    background-color: #3f51b5;
+    color: white;
+    padding: 15px 20px;
+}
+
+.class-detail-card-header h2 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.class-detail-card-body {
+    padding: 20px;
+}
+
+.class-detail-card-body p {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 0.95rem;
+}
+
+.class-detail-card-body p svg {
+    margin-right: 10px;
+    color: #3f51b5;
+}
+
+@media (min-width: 768px) {
+    .class-detail-card-header h2 {
+        font-size: 1.3rem;
+    }
+}

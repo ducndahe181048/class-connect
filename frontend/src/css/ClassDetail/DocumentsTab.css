@@ -1,0 +1,70 @@
+.documents-table-container {
+    background-color: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+.documents-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 650px;
+}
+
+.documents-table th,
+.documents-table td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+    font-size: 0.9rem;
+}
+
+.documents-table th {
+    background-color: #f9fafb;
+    font-weight: 600;
+    color: #374151;
+}
+
+.documents-table tr:last-child td {
+    border-bottom: none;
+}
+
+.documents-table tr:hover {
+    background-color: #f9fafb;
+}
+
+.document-name {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.documents-count {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    color: #6b7280;
+    font-size: 0.875rem;
+}
+
+@media (max-width: 480px) {
+    .documents-table th,
+    .documents-table td {
+        padding: 0.5rem;
+    }
+
+    .back-to-classes-btn {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+
+    .documents-count,
+    .students-count {
+        font-size: 0.8rem;
+    }
+
+    .action-btn.download-btn {
+        padding: 3px 6px;
+    }
+}

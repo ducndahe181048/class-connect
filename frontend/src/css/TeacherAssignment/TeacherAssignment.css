@@ -1,0 +1,23 @@
+.assignments-container {
+    min-height: calc(100vh - 70px);
+    /* Adjusted for navbar height */
+    background-color: #f5f7fa;
+    padding: 2rem 4rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    margin-top: 70px;
+}
+
+.back-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #6b7280;
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: color 0.2s;
+}
+
+.back-link:hover {
+    color: #4f46e5;
+}

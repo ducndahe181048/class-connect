@@ -1,0 +1,23 @@
+.upload-container {
+    min-height: calc(100vh - 70px);
+    /* Adjusted for navbar height */
+    background-color: #f5f7fa;
+    padding: 2rem 4rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    margin-top: 70px;
+}
+
+.back-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #4f46e5;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}

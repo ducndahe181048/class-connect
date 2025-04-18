@@ -1,0 +1,10 @@
+.class-stats {
+    margin-top: 1rem;
+}
+
+.stat-card {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    align-items: center;
+}

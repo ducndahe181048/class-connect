@@ -1,0 +1,19 @@
+.submission-form .form-group {
+    margin-bottom: 15px;
+}
+
+.submission-form .form-group label {
+    display: block;
+    font-size: 0.9rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.submission-form .form-group input[type="file"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    color: #555;
+}

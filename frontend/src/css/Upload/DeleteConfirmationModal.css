@@ -1,0 +1,57 @@
+.delete-confirmation-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.delete-confirmation-modal-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.delete-confirmation-modal-content h2 {
+    margin-top: 0;
+    color: #1f2937;
+    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
+}
+
+.delete-confirmation-modal p {
+    color: #4b5563;
+    margin-bottom: 1.5rem;
+}
+
+.delete-confirmation-modal-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.delete-confirm-btn {
+    background-color: #ef4444;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 5rem;
+}
+
+.delete-confirm-btn:hover {
+    background-color: #dc2626;
+}

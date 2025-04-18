@@ -1,0 +1,108 @@
+.schedule-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0.75rem;
+}
+
+.schedule-day {
+    background-color: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.schedule-day.today {
+    border: 2px solid #4f46e5;
+}
+
+.day-header {
+    padding: 0.75rem;
+    background-color: #f3f4f6;
+    border-bottom: 1px solid #e5e7eb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.day-name {
+    font-weight: 600;
+    color: #1f2937;
+    font-size: 0.875rem;
+}
+
+.day-date {
+    color: #4b5563;
+    font-size: 0.75rem;
+}
+
+.add-event-btn {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background-color: transparent;
+    border: none;
+    color: #4f46e5;
+    cursor: pointer;
+    font-size: 0.75rem;
+    display: flex;
+    align-items: center;
+    padding: 0.25rem;
+}
+
+.add-event-btn svg {
+    margin-right: 0.25rem;
+}
+
+.day-events {
+    padding: 0.75rem;
+    min-height: 150px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.no-events {
+    text-align: center;
+    color: #6b7280;
+    font-size: 0.875rem;
+    padding: 1rem 0;
+}
+
+@media (max-width: 1024px) {
+    .schedule-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .schedule-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .day-name {
+        font-size: 0.8rem;
+    }
+
+    .day-date {
+        font-size: 0.7rem;
+    }
+
+    .add-event-btn {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .schedule-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .day-events {
+        min-height: 100px;
+        max-height: 300px;
+    }
+
+    .no-events {
+        font-size: 0.8rem;
+    }
+}

@@ -1,0 +1,22 @@
+.status-badge {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.375rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.status-submitted {
+    background-color: #dbeafe;
+    color: #2563eb;
+}
+
+.status-graded {
+    background-color: #d1fae5;
+    color: #059669;
+}
+
+.status-late {
+    background-color: #fee2e2;
+    color: #dc2626;
+}

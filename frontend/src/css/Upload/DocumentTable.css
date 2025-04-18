@@ -1,0 +1,90 @@
+.documents-table-container {
+    width: 100%;
+    overflow-x: auto;
+    background-color: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+}
+
+.documents-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.875rem;
+    color: #1f2937;
+}
+
+.documents-table th,
+.documents-table td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.documents-table th {
+    background-color: #f9fafb;
+    font-weight: 600;
+    color: #4b5563;
+}
+
+.documents-table tr:hover {
+    background-color: #f3f4f6;
+}
+
+.actions-column {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-start;
+}
+
+.actions-column .action-btn {
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.actions-column .download-btn {
+    background-color: #10b981;
+    color: white;
+}
+
+.actions-column .download-btn:hover {
+    background-color: #059669;
+}
+
+.actions-column .edit-btn {
+    background-color: #f59e0b;
+    color: white;
+}
+
+.actions-column .edit-btn:hover {
+    background-color: #d97706;
+}
+
+.actions-column .delete-circle-btn {
+    background-color: #ef4444;
+    color: white;
+}
+
+.actions-column .delete-cicle-btn:hover {
+    background-color: #dc2626;
+}
+
+.no-documents {
+    text-align: center;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.no-documents p {
+    color: #6b7280;
+    font-size: 1rem;
+}
