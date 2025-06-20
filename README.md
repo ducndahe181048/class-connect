@@ -20,13 +20,13 @@
 
    - **Frontend:**
      ```bash
-     cd client
+     cd frontend
      npm install
      ```
 
    - **Backend:**
      ```bash
-     cd ../server
+     cd backend
      npm install
      ```
 
@@ -36,14 +36,14 @@
 
 - **Frontend:**
 
-  Di chuyển vào thư mục `client` và chạy:
+  Di chuyển vào thư mục `frontend` và chạy:
   ```bash
   npm start
   ```
 
 - **Backend:**
 
-  Di chuyển vào thư mục `server` và chạy:
+  Di chuyển vào thư mục `backend` và chạy:
   ```bash
   nodemon index.js --ignore uploads/
   ```
@@ -52,6 +52,8 @@
 
 ## 📌 Ghi chú
 
+- Đảm bảo file .env có những thông tin cần thiết cho backend.
+- Đảm bảo đã kết nối tới database.
 - Đảm bảo đã cài đặt **Node.js** và **MongoDB** trên máy.
 - Nếu chưa cài `nodemon`, bạn có thể cài bằng lệnh:
   ```bash
